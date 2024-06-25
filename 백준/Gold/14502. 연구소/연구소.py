@@ -55,7 +55,7 @@ def safe_check(graph):
 
 for spot in combinations(empty_spot, 3):
     visited = [[False] * M for _ in range(N)]
-    graph = copy.deepcopy(map_list)
+    graph = [m[:] for m in map_list]
     for x, y in spot:
         graph[x][y] = 1
     for i in range(N):
